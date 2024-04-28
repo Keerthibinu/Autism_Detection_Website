@@ -1,0 +1,26 @@
+.custom-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid whitesmoke; /* Border for each cell */
+  }
+  
+  .container-mains{
+    /*position: absolute;
+        margin-top: 7%;*/ 
+         background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4 )), 
+        url('../components/bgimg.jpeg'); 
+        /* background-color: black; */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto;
+        color: whitesmoke;
+        padding-left: 60px;
+      }
+      .small-table {
+        font-size: 12px; /* Adjust the font size for smaller tables */
+      }

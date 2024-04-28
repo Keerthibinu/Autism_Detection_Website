@@ -1,0 +1,28 @@
+.navbar-container{
+  height: 5%;
+  width: 100%;
+  position:fixed;
+  background-color: black;
+}
+.header{
+  color: white;
+  font-size: 32px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.links{
+  color: white;
+  align-self: center;
+}
+
+.container{
+  /* position: absolute;
+  margin-top: 7%; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )), 
+  url('../components/react.jpeg');
+  height: 100vh;
+  width: auto;
+}

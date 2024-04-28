@@ -1,0 +1,41 @@
+.container-main{
+    /* position: absolute;
+    margin-top: 7%; */
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4 )), 
+    url('../components/bgimg.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:auto;
+    color: whitesmoke;
+  }
+
+.text{
+    color: whitesmoke;
+    margin-top: 4%;
+}
+.heading{
+  color: whitesmoke;
+  text-align: left;
+}
+.content{
+  padding: 3%;
+  padding-top: 10%;
+}
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* styling for button */
+.btn-primary {
+  color: white;
+  background-color: rgb(36, 128, 159);
+  border-color:rgb(36, 128, 159);
+}
+.btn-primary:hover {
+  color: white;
+  background-color: rgb(28, 106, 131);
+  border-color: rgb(28, 106, 131);
+}

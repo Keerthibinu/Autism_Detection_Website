@@ -1,0 +1,57 @@
+.container-mains{
+     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4 )), 
+    url('../components/bg2.jpg'); 
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:auto;
+    color: whitesmoke;
+    padding-left: 60px;
+  
+  }
+
+.Heading{
+  color: whitesmoke;
+  text-align: left;
+  padding-top: 50px;
+}
+.content{
+  padding: 3%;
+  padding-top: 10%;
+}
+.button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: whitesmoke;
+  background-color: rgb(36, 128, 159);
+  border-color:rgb(36, 128, 159);
+}
+.btn-primary:hover {
+  color: whitesmoke;
+  background-color: rgb(28, 106, 131);
+  border-color: rgb(28, 106, 131);
+}
+
+.form-control {
+  color: white;
+  background-color: transparent;
+}
+
+
+.form-select {
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.form-select option {
+  background-color: black;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+}

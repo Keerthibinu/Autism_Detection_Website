@@ -1,0 +1,7 @@
+.result-container {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add some padding */
+    /* border-radius: 5px; Add subtle rounded corners */
+    /* background-color: #f5f5f5; Light background color */
+  }

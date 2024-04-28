@@ -1,0 +1,26 @@
+
+.custom-navbar-list .nav-item {
+    margin-left: 70px; /* Adjust the margin as needed */
+  }
+  .navbar-heading{
+    font-weight: bolder;
+    color: whitesmoke;
+  }
+  /* Navbar.css */
+  .navbar {
+    background-color: black ;
+  }
+.custom-navbar-list .nav-link {
+  color: whitesmoke;
+}
+
+.custom-navbar-list .nav-link:hover {
+  color: lightgray;
+}
+
+.navbar-nav .nav-link.active{
+  color: rgb(36, 128, 159); 
+}
+.navbar-brand:hover {
+  color: rgb(36, 128, 159);
+}
