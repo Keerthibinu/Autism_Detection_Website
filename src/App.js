@@ -8,7 +8,6 @@ import Contact from './components/Contact';
 import QuestionnaireMRI from './components/Quest';
 import MyForm from './components/Form';
 import Result from './components/result';
-import Footer from './components/footer';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Result" element={<Result/>} />
-        <Route path='/Footer' element={<Footer/>}/>
       </Routes>
     </Router>
     </>

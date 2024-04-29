@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import './contact.css';
 import emailjs from '@emailjs/browser';
+
 const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
@@ -30,7 +31,19 @@ const Contact = () => {
             <button className="submit-button" type="submit" value="send" >Submit</button>
             
         </form>
+        <footer className="footer">
+      <div className='icons'>
+      <a href="https://github.com/neethafrancis/">GitHub</a>
+      <a href="https://www.linkedin.com/in/neetha-francis-584673206/">Linkedin</a>
+      <a href="">Gmail</a>
+
+      </div>
+      <div className='text-footer'>
+        Copyright &#169; 2024. All rights received.
+      </div>
+    </footer>
     </section>
+    
     
   ); 
 }

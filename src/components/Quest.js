@@ -273,7 +273,7 @@ const QuestionnaireMRI = () => {
 
 
   return (
-    <div className="container-mains ">
+    <div className="container-quest">
       <h2 className="Heading">Fill in the details</h2>
       <p>Age Group: {ageGroup.toUpperCase()}</p>
 

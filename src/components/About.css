@@ -1,26 +1,49 @@
+/* Table styling */
 .custom-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-  
-  .custom-table th,
-  .custom-table td {
-    border: 1px solid whitesmoke; /* Border for each cell */
-  }
-  
-  .container-mains{
-    /*position: absolute;
-        margin-top: 7%;*/ 
-         background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4 )), 
-        url('../components/bgimg.jpeg'); 
-        /* background-color: black; */
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width:auto;
-        color: whitesmoke;
-        padding-left: 60px;
-      }
-      .small-table {
-        font-size: 12px; /* Adjust the font size for smaller tables */
-      }
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px; 
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4 )), 
+    url('../components/bgimg.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:auto;
+    color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* General text styling */
+.container-about h4 {
+  color: #fff; /* Lighten heading text color */
+  margin-top: 20px; /* Add some space above headings */
+}
+
+.container-about p {
+  color: #ddd; /* Lighten text color for paragraphs */
+  line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Table row hover effect */
+.custom-table tbody tr:hover {
+  background-color: #5e5d5d; /* Light gray background on hover */
+}

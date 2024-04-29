@@ -1,9 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar'; // Adjust the path based on your project structure
 import './About.css';
 const About = () => {
   return (
-    <div className='container-mains'>
+    <div className='container-about'>
   <h4>Understanding Autism Spectrum Disorder (ASD)</h4>
 
   <p>
@@ -30,7 +29,7 @@ const About = () => {
   Our website aims to provide a user-friendly questionnaire to assess the likelihood of ASD in individuals across different age groups. Users can fill out the questionnaire and submit relevant details for analysis.
 </p>
 
-      <p>Toddler:</p>
+      <p><h2>Toddler:</h2></p>
       <table className='custom-table small-table '>
         <thead>
           <tr>
@@ -121,7 +120,7 @@ const About = () => {
           {/* Add more rows as needed */}
         </tbody>
       </table>
-      <p>Child:</p>
+      <p><h2>Child:</h2></p>
       <table className='custom-table small-table '>
         <thead>
           <tr>
@@ -208,7 +207,7 @@ const About = () => {
           {/* Add more rows as needed */}
         </tbody>
       </table>
-      <p>Adolescent:</p>
+      <p><h2>Adolescent:</h2></p>
       <table className='custom-table small-table '>
         <thead>
           <tr>
@@ -296,7 +295,7 @@ const About = () => {
           {/* Add more rows as needed */}
         </tbody>
       </table>
-      <p>Adult:</p>
+      <p><h2>Adult:</h2></p>
       <table className='custom-table small-table '>
         <thead>
           <tr>
@@ -380,7 +379,6 @@ const About = () => {
             <td>0</td>
           </tr>
 
-          {/* Add more rows as needed */}
         </tbody>
       </table>
     

@@ -1,32 +1,42 @@
-#contactPage{
-    min-width: calc(100vh-4rem);
-    width: 100vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: center;
+#contactPage {
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-}
-.contactPageTitle{
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('../components/bgimg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem; /* Add padding for better spacing */
+  }
+  
+  .contactPageTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-.contactDesc{
+    color: #fff; /* Change title color to white */
+  }
+  
+  .contactDesc {
     padding: 1rem;
     font-size: medium;
     font-weight: 300;
-}
-.contactForm{
+    color: #ddd; /* Change description text color */
+  }
+  
+  .contactForm {
     margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
-}
-.name, .email, .msg{
+    max-width: 40rem; /* Adjust max-width for better form width */
+    width: 100%; /* Make the form take full width */
+  }
+  
+  .name,
+  .email,
+  .msg {
     font-size: medium;
     width: 100%;
     max-width: 40rem;
@@ -36,12 +46,9 @@
     border: none;
     border-radius: 0.5rem;
     background: #4a4e69;
-}
-.links{
-    display: flex;
-    flex-wrap: wrap;
-}
-.submit-button {
+  }
+  
+  .submit-button {
     background: #22223b;
     color: #eae0d5;
     border: 1px solid #eae0d5;
@@ -51,17 +58,36 @@
     padding: 1rem;
     border-radius: 5rem;
     height: 2rem;
-    -moz-border-radius: 80px / 40px;
-    -webkit-border-radius: 60px / 20px;
-    border-radius: 60px / 20px;
     font-size: medium;
     width: 7rem;
-    margin-bottom: 5rem;
-}
-.submit-button:hover{
+    margin-bottom: 3rem; /* Adjust margin-bottom for better spacing */
+  }
+  
+  .submit-button:hover {
     background-color: #eae0d5;
-    color:#22223b;
-}
-.msg{
+    color: #22223b;
+  }
+  
+  .msg {
     margin-bottom: 3rem;
-}
+    resize: none; /* Prevent textarea from being resized */
+  }
+  
+  .footer {
+    margin-top: auto; /* Move footer to the bottom of the page */
+    color: #ddd; /* Change footer text color */
+  }
+  
+  .icons a {
+    margin-right: 1rem; /* Add margin between icon links */
+    color: #ddd; /* Change icon link color */
+  }
+  
+  .icons a:hover {
+    color: #fff; /* Change icon link color on hover */
+  }
+  
+  .text-footer {
+    margin-top: 1rem; /* Add margin between footer text and icons */
+  }
+  

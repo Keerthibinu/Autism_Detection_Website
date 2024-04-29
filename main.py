@@ -18,8 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-svm_model = pickle.load(open("svm_model.pkl", "rb"))
-cnn_model = load_model("CNN.h5")
+svm_model = pickle.load(open("./models/svm_model.pkl", "rb"))
+cnn_model = load_model("./models/CNN.h5")
 
 class OrderedAnswers(BaseModel):
     score: int

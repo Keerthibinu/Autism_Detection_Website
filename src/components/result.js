@@ -7,10 +7,13 @@ const Result = () => {
   console.log(location);
   const { result } = location.state || {};
   console.log(result);
+
   return (
+    <div className='container-result'>
       <div className="result-container">
-      <h1>Autism Spectrum Disorder Screening Results</h1>
-      <p>Your prediction is: <b>{result}</b></p>
+      <center><h2>Autism Spectrum Disorder Results</h2></center>
+
+      <p>You are likely to be <b>{result}</b></p>
       <p>
         Scores of 4 or above for toddlers and 7 or above for other agegroups may indicate Autism Spectrum Disorder. However, this
         webpage should not be used as a diagnostic tool. Please seek professional
@@ -45,6 +48,7 @@ const Result = () => {
           </a>
         </li>
       </ul>
+    </div>
     </div>
   )
 }
