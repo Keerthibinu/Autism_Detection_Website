@@ -7,6 +7,7 @@ from PIL import Image
 from keras.models import load_model
 import pickle
 from io import BytesIO
+from keras.preprocessing.image import load_img, img_to_array
 
 app = FastAPI()
 
@@ -20,6 +21,8 @@ app.add_middleware(
 
 svm_model = pickle.load(open("./models/svm_model.pkl", "rb"))
 cnn_model = load_model("./models/CNN.h5")
+scaler = pickle.load(open('./models/scaler.pkl','rb'))
+
 
 class OrderedAnswers(BaseModel):
     score: int
@@ -34,23 +37,23 @@ async def predict_autism(jsonData: str = Form(...), facial_image: UploadFile = F
     answers = OrderedAnswers(**data)
 
     features = np.array([[answers.score, int(answers.age), answers.gender, answers.jaundice, answers.relation]])
-
-    svm_prediction = svm_model.predict(features)[0]
-    svm_result = 'Autistic' if svm_prediction == 1 else 'Non-Autistic'
+    std_data = scaler.transform(features)
+    svm_prediction = svm_model.predict_proba(std_data)[0]
 
     img = Image.open(BytesIO(await facial_image.read())).convert('RGB')
-    img = img.resize((128, 128))
-    img_array = np.array(img) / 255.0
+    img = img.resize((128, 128))    
+    img_array = img_to_array(img) * (1./255)
     img_array = np.expand_dims(img_array, axis=0)
+    cnn_prediction = cnn_model.predict(img_array)[0]
 
-    # Perform CNN prediction
-    cnn_prediction = cnn_model.predict(img_array)[0][0]
-    cnn_result = 'Autistic' if cnn_prediction >= 0.5 else 'Non-Autistic'
+    weight_cnn = 0.467
+    weight_svm = 0.533
+    final_autistic = (weight_cnn * cnn_prediction[0]) + (weight_svm * svm_prediction[1])
+    final_non_autistic = (weight_cnn * cnn_prediction[1]) + (weight_svm * svm_prediction[0])
+    prediction = 'Autistic' if final_autistic > final_non_autistic else 'Non-Autistic'
 
-    # Combine predictions
-    combined_result = 'Autistic' if svm_result == 'Autistic' or cnn_result == 'Autistic' else 'Non-Autistic'
+    return {'prediction': prediction}
 
-    return {'svm_prediction': svm_result, 'cnn_prediction': cnn_result, 'combined_prediction': combined_result}
 
 if __name__ == "__main__":
     import uvicorn

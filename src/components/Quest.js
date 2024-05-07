@@ -256,13 +256,13 @@ const QuestionnaireMRI = () => {
     fetch('http://localhost:8000/predict', requestOptions)
     .then(response => response.json())
     .then(data => {
-      console.log('Prediction:', data.combined_prediction);
-      setResult(data.combined_prediction);
+      console.log('Prediction:', data.prediction);
+      setResult(data.prediction);
 
       // Move navigation logic here
       navigate('/Result',{
         state: {
-          result : data.combined_prediction,
+          result : data.prediction,
         },
       });
     })
